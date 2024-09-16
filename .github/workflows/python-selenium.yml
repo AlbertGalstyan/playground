@@ -3,7 +3,7 @@ name: Python Selenium Tests
 on:
     pull_request:
       branches:
-        -master
+        - master
 
 jobs:
   selenium-tests:
