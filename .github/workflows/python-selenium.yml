@@ -33,7 +33,7 @@ jobs:
           python -m pytest --headless --html=report.html --maxfail=1 --disable-warnings
 
       - name: Upload HTML report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: pytest-html-report
           path: report.html
