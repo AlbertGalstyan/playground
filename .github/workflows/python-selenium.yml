@@ -30,4 +30,10 @@ jobs:
 
       - name: Run Selenium tests
         run: |
-          python -m pytest --headless --maxfail=1 --disable-warnings
+          python -m pytest --headless --html=report.html --maxfail=1 --disable-warnings
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v2
+        with:
+          name: pytest-html-report
+          path: report.html
