@@ -1,12 +1,15 @@
 from selenium.webdriver.common.by import By
 
+from base.base_page import BasePage
 
-class Login:
-    def __init__(self, driver):
-        self.driver = driver
-        self.email_field = (By.ID, "email-field")
-        self.password_field = (By.ID, "password-field")
-        self.login_btn = (By.ID, "submitBtn")
+
+class Login(BasePage):
+    email_field = (By.ID, "email-field")
+    password_field = (By.ID, "password-field")
+    login_btn = (By.ID, "submitBtn")
+
+    # def __init__(self, driver):
+    #     self.driver = driver
 
     def enter_username(self):
         self.driver.find_element(*self.email_field).send_keys("testingart@email.com")
