@@ -22,6 +22,7 @@ def driver(request):
     chrome_options.add_argument('--disable-gpu')
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
     driver.get("https://playground.testingart.com")
+    driver.maximize_window()
     yield driver
     print("Tearing DOWN ...")
     driver.quit()
